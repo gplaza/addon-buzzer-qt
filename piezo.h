@@ -42,9 +42,9 @@ private:
     static Piezo* m_Instance;
 
 public:
-    void good(int pin = 0);
-    void bad(int pin = 0);
-    void caution(int pin = 0);
+    void good(int pin = 1);
+    void bad(int pin = 1);
+    void caution(int pin = 1);
 };
 
 
