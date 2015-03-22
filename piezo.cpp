@@ -2,35 +2,35 @@
 
 Piezo* Piezo::m_Instance = 0;
 
-void Piezo::good()
+void Piezo::good(int pin)
 {
-    softToneWrite (1, 800) ;
+    softToneWrite (pin, 800) ;
     delay (150) ;
-    softToneWrite (1, 0) ;
+    softToneWrite (pin, 0) ;
 }
 
-void Piezo::caution()
+void Piezo::caution(int pin)
 {
-    softToneWrite(1,800);
+    softToneWrite(pin,800);
     delay(50);
-    softToneWrite(1,0);
+    softToneWrite(pin,0);
     delay(50);
-    softToneWrite(1,800);
+    softToneWrite(pin,800);
     delay(50);
-    softToneWrite(1,0);
+    softToneWrite(pin,0);
     delay(50);
-    softToneWrite(1,800);
+    softToneWrite(pin,800);
     delay(50);
-    softToneWrite(1,0);
+    softToneWrite(pin,0);
 }
 
-void Piezo::bad(){
+void Piezo::bad(int pin){
 
-    softToneWrite(1,450);
+    softToneWrite(pin,450);
     delay(100);
-    softToneWrite(1,0);
+    softToneWrite(pin,0);
     delay(50);
-    softToneWrite(1,450);
+    softToneWrite(pin,450);
     delay(100);
-    softToneWrite(1,0);
+    softToneWrite(pin,0);
 }

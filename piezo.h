@@ -18,8 +18,6 @@ public:
             if (!m_Instance)
             {
                 m_Instance = new Piezo;
-                wiringPiSetup();
-                softToneCreate(1);
             }
 
             mutex.unlock();
@@ -44,9 +42,9 @@ private:
     static Piezo* m_Instance;
 
 public:
-    void good();
-    void bad();
-    void caution();
+    void good(int pin = 0);
+    void bad(int pin = 0);
+    void caution(int pin = 0);
 };
 
 
